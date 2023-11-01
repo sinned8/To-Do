@@ -1,0 +1,24 @@
+{
+  "name": "to-do",
+  "version": "1.0.0",
+  "description": "to do list project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinned8/To-Do.git"
+  },
+  "author": "Dennis Dust",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sinned8/To-Do/issues"
+  },
+  "homepage": "https://github.com/sinned8/To-Do#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
