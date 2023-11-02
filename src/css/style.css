@@ -17,4 +17,55 @@
     height: 100%;
     width: 25vw;
     background-color: #0284c7;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.proj-header{
+    font-size: 2em;
+    margin-top: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    color: white;
+    border-bottom: 2px solid #fffd71;
+    padding-bottom: 6px;
+}
+
+.project{
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #00000048;
+}
+.project:hover{
+    cursor: pointer;
+    border: 2px solid #ffffff;
+}
+
+.add-proj-container{
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+.add-box{
+    width: 40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.project-link{
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: 800;
+    color: #ffffff;
+}
+.project-link:hover{
+    font-size: 3em;
 }
