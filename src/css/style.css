@@ -166,6 +166,27 @@
     
 }
 .add-task-container:hover{
-
     background-color: rgb(8, 194, 8)
+}
+
+#add-proj-container{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+}
+.forum-container{
+    width: 200px;
+    border: 8px;
+    box-shadow: 4px 4px 5px 0px #000000af;
+    padding: 2vh 2vw;
+}
+.forum-container h2{
+    margin: 1vh;
+    padding: .25vh;
+    width: 10vw;
+    font-size: 1rem;
+    color: #78788c;
+    border-bottom: 2px solid #78788c;
 }
