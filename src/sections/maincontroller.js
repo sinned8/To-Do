@@ -7,7 +7,7 @@ constructor(model,view){
 
     view.getByID("add-project-bttn").addEventListener('click', () => this.toggleAddTaskFormVisibility(true, 'add-proj-container'));
     view.getByID("close-add-proj-forum-bttn").addEventListener('click', () => this.resetAndCloseForumByID('add-proj-forum', 'add-proj-container'));
-
+    
 
 }
 
