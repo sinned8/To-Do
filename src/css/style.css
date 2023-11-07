@@ -116,7 +116,7 @@
     width: 30px;
     height: 30px;
 }
-.proj-info-icon{
+.proj-edit-icon, .proj-trash-icon{
     width: 25px;
     height: 25px;
     margin: 10px;
