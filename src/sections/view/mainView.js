@@ -19,7 +19,9 @@ export default class MainView{
     getAddProjectFormElementValueByName(elementName){
         return this.getByID('add-proj-forum').elements[elementName].value
     }
-
+    getAddTaskFormElementValueByName(elementName){
+        return this.getByID('add-task-forum').elements[elementName].value
+    }
     resetAndCloseFormByID(formID,formContainerID){
         this.getByID(formID).reset()
         this.toggleAddTaskFormVisibility(false,formContainerID)
@@ -39,10 +41,27 @@ export default class MainView{
         let projectView = new ProjectView(projectDivElementClone, item);
         this.getByID('proj-main-container').append(projectView.element);
 
+
+        let option = document.createElement('option')
+        option.value = item.element
+        option.text = item.element
+        option.id = `checkbox-${item.id}`
+        this.getByID('task-project').appendChild(option)
         return projectView
     }
-    
+    fillAddForumWhenEdit(taskItemView){
+        this.getByID('add-task-forum').elements['task-name'].value = taskItemView.model.name
+        this.getByID('add-task-forum').elements['task-due-date'].value = taskItemView.model.dueDate
+        this.getByID('add-task-forum').elements['task-project'].value = taskItemView.model.project
 
-
+    }
+    updateTaskItem(element){
+        let taskItemToUpdate = this.getByID(element.id)
+        new taskItemView(taskItemToUpdate,element.model)
+    }
+    updateTaskItemAfterProjectDeleted(element){
+        let taskItemToUpdate = this.getByID(element.id)
+        new taskItemView(taskItemToUpdate,element)
+    }
 
 }
