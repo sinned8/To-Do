@@ -24,4 +24,25 @@ export default class MainView{
         this.getByID(formID).reset()
         this.toggleAddTaskFormVisibility(false,formContainerID)
     }
+    appendTaskItem(item){
+        let templateContent = this.getByID('task-template').content
+        let taskItemElementClone = templateContent.cloneNode(true).querySelector('div')
+        let taskItemView = new taskItemView(taskItemElementClone, item)
+        this.getByID('task-container').append(taskItemView.element)
+
+        return taskItemView
+    }
+
+    appendProject(item){
+        let templateContent = this.getByID('project-template')
+        let projectDivElementClone = templateContent.cloneNode(true).querySelector("div");
+        let projectView = new ProjectView(projectDivElementClone, item);
+        this.getByID('proj-main-container').append(projectView.element);
+
+        return projectView
+    }
+    
+
+
+
 }

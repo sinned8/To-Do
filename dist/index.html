@@ -22,21 +22,24 @@
         </div>
         <!-- main content container -->
         <div class="main-panel">
-            <div class="proj-info-container">
-                <div class="proj-info">
-                    <div class="proj-info-name">Starter Project</div>
-                    <div class="proj-info-description">test description</div>
-                </div>
-                <div class="proj-icon-container">
-                    <div class="icon-box">
-                        <img role="button" src="../src/assests/imgs/folder-edit-outline.svg" class="proj-edit-icon">
+            <div class="proj-main-container">
+                <div class="proj-info-container">
+                    <div class="proj-info">
+                        <div class="proj-info-name">Starter Project</div>
+                        <div class="proj-info-description">test description</div>
                     </div>
-                    <div class="icon-box">
-                        <img role="button" src="../src/assests/imgs/trash-can-outline.svg" class="proj-trash-icon">
+                    <div class="proj-icon-container">
+                        <div class="icon-box">
+                            <img role="button" src="../src/assests/imgs/folder-edit-outline.svg" class="proj-edit-icon">
+                        </div>
+                        <div class="icon-box">
+                            <img role="button" src="../src/assests/imgs/trash-can-outline.svg" class="proj-trash-icon">
+                        </div>
                     </div>
+                    <!-- Need a way to edit proj info after adding  -->
                 </div>
-                <!-- Need a way to edit proj info after adding  -->
             </div>
+            
             <div class="task-container">
                 <!-- daily tasks will go in here -->
                 <div class="task">
@@ -96,20 +99,17 @@
         </div>
 </template>
 <template id="task-template">
-    <div class="task-container">
-        <!-- daily tasks will go in here -->
-        <div class="task">
-            <div class="task-content">
-                <div class="task-area">
-                    <div class="checkmark-proj"></div>
-                    <div class="task-name">Example task</div>
-                </div>
-                <div class="task-area">
-                    <div class="due-date"> in 0 days</div>
-                    <!-- need forum pop up on edit button -->
-                    <img src="../src/assests/imgs/pencil-outline.svg" class="edit-task">
-                    <img src="../src/assests/imgs/trash-can-outline.svg" class="delete-task">
-                </div>
+    <div class="task">
+        <div class="task-content">
+            <div class="task-area">
+                <div class="checkmark-proj"></div>
+                <div class="task-name">Example task</div>
+            </div>
+            <div class="task-area">
+                <div class="due-date"> in 0 days</div>
+                <!-- need forum pop up on edit button -->
+                <img src="../src/assests/imgs/pencil-outline.svg" class="edit-task">
+                <img src="../src/assests/imgs/trash-can-outline.svg" class="delete-task">
             </div>
         </div>
     </div>
