@@ -5,7 +5,7 @@ export default class MainView{
     getByID(id){
         return document.getElementById(id)
     }
-    toggleAddTaskFormVisibility(visible, id)
+    toggleAddTaskForumVisibility(visible, id)
     {
         const displayValue = visible ? 'block' : 'none';
         this.getByID(id).style.display = displayValue;
@@ -16,15 +16,15 @@ export default class MainView{
         this.getByID(id).style.display = displayValue
     }
 
-    getAddProjectFormElementValueByName(elementName){
+    getAddProjectForumElementValueByName(elementName){
         return this.getByID('add-proj-forum').elements[elementName].value
     }
-    getAddTaskFormElementValueByName(elementName){
+    getAddTaskForumElementValueByName(elementName){
         return this.getByID('add-task-forum').elements[elementName].value
     }
-    resetAndCloseFormByID(formID,formContainerID){
-        this.getByID(formID).reset()
-        this.toggleAddTaskFormVisibility(false,formContainerID)
+    resetAndCloseForumByID(forumID,forumContainerID){
+        this.getByID(forumID).reset()
+        this.toggleAddTaskFormVisibility(false,forumContainerID)
     }
     appendTaskItem(item){
         let templateContent = this.getByID('task-template').content
@@ -57,11 +57,11 @@ export default class MainView{
     }
     updateTaskItem(element){
         let taskItemToUpdate = this.getByID(element.id)
-        new taskItemView(taskItemToUpdate,element.model)
+        new TaskView(taskItemToUpdate,element.model)
     }
     updateTaskItemAfterProjectDeleted(element){
         let taskItemToUpdate = this.getByID(element.id)
-        new taskItemView(taskItemToUpdate,element)
+        new TaskView(taskItemToUpdate,element)
     }
 
 }
