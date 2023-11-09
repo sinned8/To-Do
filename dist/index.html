@@ -77,6 +77,39 @@
             </form>
         </div>
 
+        <div id="add-task-forum-container">
+            <form class="forum container" id="add-task-forum">
+                <h2> New Task</h2>
+                <div class="input-content">
+                    <label for="task-name">
+                        <b>Task Name</b>
+                    </label>
+                    <input type="text" id="task-name" name="task-name" required placeholder="Write the task name here...">
+                </div>
+                <div class="row-container">
+                    <div class="input-content">
+                        <label for="task-due-date">
+                            <b>Due Date</b>
+                        </label>
+                        <input type="date" id="task-due-date" required name="task-due-date">
+                    </div>
+                    <div class="input-content">
+                        <label for="task-project">
+                            <b>Project</b>
+                        </label>
+                        <select name="task-project" id="task-project">
+                            <option value="Inbox" selected>Inbox</option>
+                        </select>
+                    </div>
+                    <div class="forum-bttns">
+                        <button type="submit" id="add-task-forum-bttn" class="btn">Add Project</button>
+                        <button type="button" id="close-add-task-forum-bttn" class="btn cancel">Close</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
 
     </div>
 

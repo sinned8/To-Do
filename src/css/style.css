@@ -181,6 +181,7 @@
     border: 8px;
     box-shadow: 4px 4px 5px 0px #000000af;
     padding: 2vh 2vw;
+    /*  */
     display: none;
 }
 .forum-container h2{
