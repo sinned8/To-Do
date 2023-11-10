@@ -5,10 +5,13 @@ constructor(model,view){
     this.view = view;
     this.onEditTaskItem = {status:'false', element: ""};
 
-    view.getByID("add-project-bttn").addEventListener('click', () => this.toggleAddTaskFormVisibility(true, 'add-proj-container'));
-    view.getByID("close-add-proj-forum-bttn").addEventListener('click', () => this.resetAndCloseForumByID('add-proj-forum', 'add-proj-container'));
-    view.getByID('add-task-forum').addEventListener('submit', (e) => this.on)
-
+    view.getByID("add-project-bttn").addEventListener('click', () => this.toggleAddTaskForumVisibility(true,'add-proj-container'));
+    view.getByID("close-add-proj-forum-bttn").addEventListener('click', () => this.resetAndCloseForumByID('add-proj-forum','add-proj-container'));
+    view.getByID('add-task-forum').addEventListener('submit', (e) => this.onAddTaskForumSubmit(e))
+    view.getByID('add-project-bttn').addEventListener('click', () => view.toggleAddTaskForumVisibility(true,'add-proj-container'))
+    view.getByID('close-add-proj-forum-bttn').addEventListener('click',() => view.resetAndCloseForumByID('add-proj-forum','add-proj-container'))
+    view.getByID('add-proj-forum').addEventListener('submit', (e) => this.onAddProjectForumSubmit(e))
+    window.addEventListener('load',() => this.retrieveRecords());
 }
 
 
@@ -129,7 +132,7 @@ updateDeletedProjectToInbox(deletedProjectName){
 }
 retrieveRecords(){
     this.retrieveProjects();
-    this.retrieveTodoList();
+    this.retrieveTaskList();
 }
 
 

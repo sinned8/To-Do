@@ -9,6 +9,7 @@ export default class MainView{
     {
         const displayValue = visible ? 'block' : 'none';
         this.getByID(id).style.display = displayValue;
+        
     }
 
     toggleFilterVisiblity(visible, id){
