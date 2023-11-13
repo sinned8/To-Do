@@ -25,7 +25,7 @@ export default class MainView{
     }
     resetAndCloseForumByID(forumID,forumContainerID){
         this.getByID(forumID).reset()
-        this.toggleAddTaskFormVisibility(false,forumContainerID)
+        this.toggleAddTaskForumVisibility(false,forumContainerID)
     }
     appendTaskItem(item){
         let templateContent = this.getByID('task-template').content
@@ -40,7 +40,7 @@ export default class MainView{
         let templateContent = this.getByID('project-template')
         let projectDivElementClone = templateContent.cloneNode(true).querySelector("div");
         let projectView = new ProjectView(projectDivElementClone, item);
-        this.getByID('proj-main-container').append(projectView.element);
+        this.getByID('proj-container').append(projectView.element);
 
 
         let option = document.createElement('option')

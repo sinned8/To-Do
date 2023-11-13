@@ -7,10 +7,11 @@ export default class ProjectView{
         this.name = projectModel.name
     }
     get projectName(){
-        return this.element.querySelector('proj-info-name')
+        return this.element.querySelector('proj-name')
     }
     get id(){
-        return this.element.querySelector('id')
+        return this.element.getAttribute("id")
+        
     }
     get deleteBttn(){
         return this.element.querySelector('proj-trash-icon')
@@ -19,7 +20,8 @@ export default class ProjectView{
         return this.element.querySelector('proj-edit-icon')
     }
     set id(value){
-        this.element.setAttribute('id',value)
+        this.element.setAttribute("id",value)
+        
     }
     set name(value){
         this.projectName.textContent = value
