@@ -7,7 +7,8 @@ export default class ProjectView{
         this.name = projectModel.name
     }
     get projectName(){
-        return this.element.querySelector('proj-name')
+        return this.element.querySelector('proj-name') 
+        // querSelector only for CSS classes
     }
     get id(){
         return this.element.getAttribute("id")
