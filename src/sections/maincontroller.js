@@ -113,8 +113,8 @@ createNewProject(){
 appendAndHookUpNewProjectFromModel(newProject){
     const newProjectView = this.view.appendProject(newProject);
 
-        newProjectView.deleteButton.addEventListener("click", 
-            () => this.deleteProject(newProjectView));
+        // newProjectView.deleteButton.addEventListener("click", 
+        //     () => this.deleteProject(newProjectView));
 
 }
 

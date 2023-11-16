@@ -29,7 +29,7 @@ export default class MainView{
     }
     appendTaskItem(item){
         let templateContent = this.getByID('task-template').content
-        let taskItemElementClone = templateContent.cloneNode(true).querySelector('div')
+        let taskItemElementClone = templateContent.cloneNode(true).querySelector("div")
         let taskItemView = new TaskItemView(taskItemElementClone, item)
         this.getByID('task-container').append(taskItemView.element)
 

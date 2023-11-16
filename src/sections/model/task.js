@@ -10,5 +10,6 @@ export default class TaskItem
     this.priority = priority;
     this.id = uuidv4();
     this.checkboxStatus = checkboxStatus;
+    
   }
 } 

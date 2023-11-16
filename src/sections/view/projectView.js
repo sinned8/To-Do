@@ -7,29 +7,29 @@ export default class ProjectView{
         this.model = projectModel
         this.id = projectModel.id
         this.name = projectModel.name
-        return this.element
+        
     }
     
     get projectName(){
-        return this.element.querySelector('proj-name') 
+        return this.element.querySelector('.project') 
         // querSelector only for CSS classes
     }
     get id(){
         return this.element.getAttribute('id')
         
     }
-    get deleteBttn(){
-        return this.element.querySelector('proj-trash-icon')
-    }
-    get editBttn(){
-        return this.element.querySelector('proj-edit-icon')
-    }
+    // get deleteBttn(){
+    //     return this.element.querySelector('proj-trash-icon')
+    // }
+    // get editBttn(){
+    //     return this.element.querySelector('proj-edit-icon')
+    // }
     set id(value){
         this.element.setAttribute("id", value)
         
     }
+   
     set name(value){
         this.projectName.textContent = value
     }
-
 }

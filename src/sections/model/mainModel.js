@@ -37,6 +37,7 @@ export default class MainModel
 
     createNewProject(name)
     {
+        console.log(name);
         const newProject = new Project(name);
         this.projectList.add(newProject);
         return newProject;
