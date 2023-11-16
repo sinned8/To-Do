@@ -116,6 +116,10 @@ appendAndHookUpNewProjectFromModel(newProject){
         newProjectView.deleteBttn.addEventListener("click", 
             () => this.deleteProject(newProjectView));
 
+        newProjectView.projectName.addEventListener('click',
+        () => this.filterByProject(newProjectView.projectName.textContent))
+
+
 }
 
 deleteProject(projectView){
@@ -187,6 +191,16 @@ retrieveCheckbox(){
         })
 }
     
+filterByProject(projectName){
+    let taskListObj = this.model.taskList.itemsById
+
+    Object.keys(taskListObj).forEach(key =>
+        {
+            const statusValue = taskListObj[key].project == projectName ? true : false
+            this.view.toggleFilterVisiblity(statusValue,key)
+        });
+        this.view.getByID('proj-info-name').textContent = projectName
+}
 
 
 }
