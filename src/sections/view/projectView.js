@@ -18,9 +18,9 @@ export default class ProjectView{
         return this.element.getAttribute('id')
         
     }
-    // get deleteBttn(){
-    //     return this.element.querySelector('proj-trash-icon')
-    // }
+    get deleteBttn(){
+        return this.element.querySelector('.delete-project-bttn')
+    }
     // get editBttn(){
     //     return this.element.querySelector('proj-edit-icon')
     // }

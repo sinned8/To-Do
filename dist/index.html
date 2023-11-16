@@ -10,9 +10,11 @@
         <!-- project side bar panel -->
         <div class="proj-panel">
             <h3 class="proj-header">Projects</h3>
-            <div class="proj-container" id="proj-container">
+            <div class="proj-container-side" id="proj-container">
                 <!-- projects in here -->
-                <div class="project">Starter Project</div>
+                <!-- <div class="project">Starter Project
+                    <div>x</div>
+                </div> -->
             </div>               
             <div class="add-proj-container">
                 <div class="add-box">
@@ -27,14 +29,6 @@
                     <div class="proj-info">
                         <div class="proj-info-name">Starter Project</div>
                         <div class="proj-info-description">test description</div>
-                    </div>
-                    <div class="proj-icon-container">
-                        <div class="icon-box">
-                            <img role="button" src="../src/assests/imgs/folder-edit-outline.svg" class="proj-edit-icon">
-                        </div>
-                        <div class="icon-box">
-                            <img role="button" src="../src/assests/imgs/trash-can-outline.svg" class="proj-trash-icon">
-                        </div>
                     </div>
                     <!-- Need a way to edit proj info after adding  -->
                 </div>
@@ -121,19 +115,20 @@
 
 <template id="project-template">
     <div class="proj-container" id="proj-container">
-        <!-- projects in here -->
         <div class="project"></div>
+        <div class="delete-project-bttn">x</div>
     </div>
 </template>
+
 <template id="task-template">
     <div class="task">
         <div class="task-content">
             <div class="task-area">
                 <div class="checkmark-proj"></div>
-                <div class="task-name">Example task</div>
+                <div class="task-name"></div>
             </div>
             <div class="task-area">
-                <div class="due-date"> in 0 days</div>
+                <div class="due-date"></div>
                 <!-- need forum pop up on edit button -->
                 <img src="../src/assests/imgs/pencil-outline.svg" class="edit-task">
                 <img src="../src/assests/imgs/trash-can-outline.svg" class="delete-task">

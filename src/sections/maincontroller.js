@@ -113,13 +113,13 @@ createNewProject(){
 appendAndHookUpNewProjectFromModel(newProject){
     const newProjectView = this.view.appendProject(newProject);
 
-        // newProjectView.deleteButton.addEventListener("click", 
-        //     () => this.deleteProject(newProjectView));
+        newProjectView.deleteBttn.addEventListener("click", 
+            () => this.deleteProject(newProjectView));
 
 }
 
 deleteProject(projectView){
-    this.updateProjectToInbox(projectView.model.name)
+    this.updateDeletedProjectToInbox(projectView.model.name)
     this.model.removeProjectById(projectView.id)
     this.view.getByID(`checkbox-${projectView.id}`).remove()
     projectView.element.remove()
