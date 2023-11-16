@@ -1,4 +1,4 @@
-import TaskView from './taskView'
+import TaskItemView from './taskView'
 import ProjectView from './projectView'
 
 export default class MainView{
@@ -30,14 +30,14 @@ export default class MainView{
     appendTaskItem(item){
         let templateContent = this.getByID('task-template').content
         let taskItemElementClone = templateContent.cloneNode(true).querySelector('div')
-        let taskItemView = new taskItemView(taskItemElementClone, item)
+        let taskItemView = new TaskItemView(taskItemElementClone, item)
         this.getByID('task-container').append(taskItemView.element)
 
         return taskItemView
     }
 
     appendProject(item){
-        let templateContent = this.getByID('project-template')
+        let templateContent = this.getByID('project-template').content
         let projectDivElementClone = templateContent.cloneNode(true).querySelector("div");
         let projectView = new ProjectView(projectDivElementClone, item);
         this.getByID('proj-container').append(projectView.element);

@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-export default class TodoItem
+export default class TaskItem
 {
   constructor(name, description, dueDate, project, priority, checkboxStatus)
   {

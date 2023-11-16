@@ -22,8 +22,8 @@ onAddTaskForumSubmit(e){
     this.view.resetAndCloseForumByID('add-task-forum','add-task-forum-container')
 }
 createNewTaskItem(){
-    const newTaskItem = this.createNewTaskItemFromForumInputs();
-    this.appendAndHookUpNewTodoItemFromModel(newTaskItem)
+    const newTaskItem = this.createNewTaskFromForumInputs();
+    this.appendAndHookUpNewTaskItemFromModel(newTaskItem)
     this.model.updateTaskListLocalStorage()
 }
 updateTaskItem(){

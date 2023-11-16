@@ -6,6 +6,6 @@ export default class Project
   {
     this.name = name;
     this.id = uuidv4();
-    // console.log(this.id); setting random uuid
+    // console.log(this.id); 
   }
 } 
