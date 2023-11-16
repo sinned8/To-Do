@@ -44,8 +44,8 @@ export default class MainView{
 
 
         let option = document.createElement('option')
-        option.value = item.element
-        option.text = item.element
+        option.value = item.name
+        option.text = item.name
         option.id = `checkbox-${item.id}`
         this.getByID('task-project').appendChild(option)
         return projectView
