@@ -11,6 +11,7 @@ constructor(model,view){
     view.getByID('add-project-bttn').addEventListener('click', () => view.toggleAddTaskForumVisibility(true,'add-proj-container'))
     view.getByID('close-add-proj-forum-bttn').addEventListener('click',() => view.resetAndCloseForumByID('add-proj-forum','add-proj-container'))
     view.getByID('task-add').addEventListener('click', () => view.toggleAddTaskForumVisibility(true,'add-task-forum-container'))
+    view.getByID('close-add-task-forum-bttn').addEventListener('click', () => view.resetAndCloseForumByID('add-task-forum','add-task-forum-container'))
     view.getByID('add-proj-forum').addEventListener('submit', (e) => this.onAddProjectForumSubmit(e))
     window.addEventListener('load',() => this.retrieveRecords());
 }
