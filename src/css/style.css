@@ -175,10 +175,21 @@
     font-size: 13px;
     
 }
-.edit-task, .delete-task{
+.edit-task{
     cursor: pointer;
+    height: 20px;
     width: 20px;
     margin-left: 12px;
+    background-image: url(/src/assests/imgs/pencil-outline.svg);
+    border: none;
+}
+.delete-task{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-left: 12px;
+    background-image: url(/src/assests/imgs/trash-can-outline.svg);
+    border: none;
 }
 
 .add-task-container{
