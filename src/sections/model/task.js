@@ -1,13 +1,11 @@
 import { v4 as uuidv4 } from 'uuid';
 export default class TaskItem
 {
-  constructor(name, description, dueDate, project, priority, checkboxStatus)
+  constructor(name, dueDate, project, checkboxStatus)
   {
     this.name = name;
-    this.description = description;
     this.dueDate = dueDate;
     this.project = project;
-    this.priority = priority;
     this.id = uuidv4();
     this.checkboxStatus = checkboxStatus;
     

@@ -12,9 +12,9 @@ export default class MainModel
         this.projectList =  new ProjectList();
     }
 
-    createAndAddNewTaskItem(name, description, dueDate, project, checkboxStatus)
+    createAndAddNewTaskItem(name, dueDate, project, checkboxStatus)
     {
-        const newTaskItem = new TaskItem(name, description, dueDate, project, checkboxStatus)
+        const newTaskItem = new TaskItem(name, dueDate, project, checkboxStatus)
         this.taskList.add(newTaskItem)
 
         return newTaskItem
@@ -25,7 +25,7 @@ export default class MainModel
         element.model.name = name;
         element.model.description = description;
         element.model.dueDate = dueDate;
-        element.model.project =project;
+        element.model.project = project;
         return element
 
     }

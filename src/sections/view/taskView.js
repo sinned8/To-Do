@@ -7,17 +7,18 @@ export default class TaskItemView
         this.id = taskItemModel.id;
         this.name = taskItemModel.name;
         this.description = taskItemModel.description;
-        this.dueDate = taskItemModel.dueDate;
+        this.due = taskItemModel.dueDate;
         this.project = taskItemModel.project;
-        
+        console.log(this.project);
+        console.log(this.due);
     }
     get checkbox(){
         return this.element.querySelector('input[name=checkmark-proj]')
     }
     get taskName(){
         return this.element.querySelector('.task-name')
-
     }
+
     get taskDueDate(){
         return this.element.querySelector('.due-date')
     }

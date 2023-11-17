@@ -40,7 +40,7 @@ getElementsFromForumInputs(){
     const name = this.view.getAddTaskForumElementValueByName('task-name')
     const dueDate = this.view.getAddTaskForumElementValueByName('task-due-date')
     const project = this.view.getAddTaskForumElementValueByName('task-project')
-    console.log(dueDate);
+    console.log(project);
     return {name, dueDate, project};
 }
 createNewTaskFromForumInputs(){
