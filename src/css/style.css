@@ -155,8 +155,9 @@
 }
 
 .task-area{
-    align-items: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .checkmark-proj{
     border: 2px solid rgb(65, 60, 60);
@@ -167,6 +168,12 @@
 }
 .task-name{
     margin-left: 12px;
+    font-weight: 700;
+}
+#due-date{
+    margin-left: 25px;
+    font-size: 13px;
+    
 }
 .edit-task, .delete-task{
     cursor: pointer;
