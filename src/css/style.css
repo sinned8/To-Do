@@ -175,7 +175,7 @@
     font-size: 13px;
     
 }
-.edit-task{
+#edit-task{
     cursor: pointer;
     height: 20px;
     width: 20px;
@@ -183,7 +183,7 @@
     background-image: url(/src/assests/imgs/pencil-outline.svg);
     border: none;
 }
-.delete-task{
+#delete-task{
     cursor: pointer;
     height: 20px;
     width: 20px;
