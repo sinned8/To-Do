@@ -40,7 +40,7 @@ getElementsFromForumInputs(){
     const name = this.view.getAddTaskForumElementValueByName('task-name')
     const dueDate = this.view.getAddTaskForumElementValueByName('task-due-date')
     const project = this.view.getAddTaskForumElementValueByName('task-project')
-
+    console.log(dueDate);
     return {name, dueDate, project};
 }
 createNewTaskFromForumInputs(){
@@ -52,8 +52,8 @@ createNewTaskFromForumInputs(){
 appendAndHookUpNewTaskItemFromModel(taskItem){
     const newTaskItemView = this.view.appendTaskItem(taskItem)
 
-    // newTaskItemView.deleteButton.addEventListener('click',() =>
-    // this.deleteTaskItem(newTaskItemView));
+    newTaskItemView.deleteBttn.addEventListener('click',() =>
+    this.deleteTaskItem(newTaskItemView));
 
     // newTaskItemView.editButton.addEventListener('click',() =>
     // this.editTaskItem(newTaskItemView));
@@ -165,7 +165,7 @@ retrieveProjects(){
 retrieveTaskList(){
     if(window.localStorage.getItem('taskList') !== null){
         let temp = (JSON.parse(localStorage.getItem('taskList')));
-        let projectListObj = temp.itemsById;
+        let taskListObj = temp.itemsById;
 
         Object.keys(taskListObj).forEach(key =>
             {

@@ -22,7 +22,7 @@ export default class TaskItemView
         return this.element.querySelector('.due-date')
     }
     get deleteBttn(){
-        return this.element.querySelector('delete-task')
+        return this.element.querySelector('.delete-task')
     }
     get editBttn(){
         return this.element.querySelector('edit-task')

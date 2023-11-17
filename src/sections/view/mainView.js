@@ -13,7 +13,7 @@ export default class MainView{
     }
 
     toggleFilterVisiblity(visible, id){
-        const displayValue = visible ? 'grid' : 'none';
+        const displayValue = visible ? 'block' : 'none';
         this.getByID(id).style.display = displayValue
     }
 
