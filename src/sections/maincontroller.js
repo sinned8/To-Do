@@ -59,8 +59,8 @@ appendAndHookUpNewTaskItemFromModel(taskItem){
     newTaskItemView.editBttn.addEventListener('click',() =>
     this.editTaskItem(newTaskItemView));
 
-    // newTaskItemView.deleteButton.addEventListener('change',() =>
-    // this.checkCheckbox(newTaskItemView));
+    newTaskItemView.checkbox.addEventListener('click',() =>
+    this.checkCheckbox(newTaskItemView));
 
     return newTaskItemView
 }
