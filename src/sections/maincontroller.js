@@ -12,6 +12,8 @@ constructor(model,view){
     view.getByID('task-add').addEventListener('click', () => view.toggleAddTaskForumVisibility(true,'add-task-forum-container'))
     view.getByID('close-add-task-forum-bttn').addEventListener('click', () => view.resetAndCloseForumByID('add-task-forum','add-task-forum-container'))
     view.getByID('add-proj-forum').addEventListener('submit', (e) => this.onAddProjectForumSubmit(e))
+    view.getByID('inbox').addEventListener('click', () => this.filterByProject('Inbox'))
+    
     window.addEventListener('load',() => this.retrieveRecords());
 }
 
@@ -40,7 +42,6 @@ getElementsFromForumInputs(){
     const name = this.view.getAddTaskForumElementValueByName('task-name')
     const dueDate = this.view.getAddTaskForumElementValueByName('task-due-date')
     const project = this.view.getAddTaskForumElementValueByName('task-project')
-    console.log(project);
     return {name, dueDate, project};
 }
 createNewTaskFromForumInputs(){
@@ -55,8 +56,8 @@ appendAndHookUpNewTaskItemFromModel(taskItem){
     newTaskItemView.deleteBttn.addEventListener('click',() =>
     this.deleteTaskItem(newTaskItemView));
 
-    // newTaskItemView.editButton.addEventListener('click',() =>
-    // this.editTaskItem(newTaskItemView));
+    newTaskItemView.editBttn.addEventListener('click',() =>
+    this.editTaskItem(newTaskItemView));
 
     // newTaskItemView.deleteButton.addEventListener('change',() =>
     // this.checkCheckbox(newTaskItemView));
@@ -71,7 +72,7 @@ deleteTaskItem(taskItemView){
     this.model.updateTaskListLocalStorage()
 }
 editTaskItem(taskItemView){
-    this.view.toggleAddTaskFormVisibility(true,'add-task-forum-container')
+    this.view.toggleAddTaskForumVisibility(true,'add-task-forum-container')
     this.view.fillAddForumWhenEdit(taskItemView)
     this.onEditTaskItem.status = true
     this.onEditTaskItem.element = taskItemView

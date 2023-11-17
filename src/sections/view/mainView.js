@@ -58,11 +58,11 @@ export default class MainView{
     }
     updateTaskItem(element){
         let taskItemToUpdate = this.getByID(element.id)
-        new TaskView(taskItemToUpdate,element.model)
+        new TaskItemView(taskItemToUpdate,element.model)
     }
     updateTaskItemAfterProjectDeleted(element){
         let taskItemToUpdate = this.getByID(element.id)
-        new TaskView(taskItemToUpdate,element)
+        new TaskItemView(taskItemToUpdate,element)
     }
 
 }
