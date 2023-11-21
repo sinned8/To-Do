@@ -49,21 +49,7 @@
     cursor: pointer;
     border: 2px solid #ffffff;
 }
-/* .project{
-    font-size: 1em;
-    padding: 10px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-weight: 500;
-    color: #fff;
-    background-color: #00000048;
-} */
-/* .project:hover{
-    cursor: pointer;
-    border: 2px solid #ffffff;
-} */
+
 
 .add-proj-container{
     align-items: center;
@@ -83,10 +69,6 @@
     font-weight: 800;
     color: #ffffff;
 }
-/* .project-link:hover{
-    font-size: 3em;
-} */
-
 .main-panel{
     height: 100%;
     width: 75%;
@@ -95,15 +77,11 @@
     font-size: 1rem;
 }
 
-/* img{
-    width: 30px
-} */
-
 .proj-info-container{
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid rgb(65, 60, 60);
-    /* position: relative; */
+    
 }
 .proj-info-name{
     font-size: 2em;
@@ -120,14 +98,13 @@
     display: flex;
     margin-right: 10px;
     align-items: center;
-    /* position: relative; */
+    
 }
 .icon-box{
     cursor: pointer;
     margin-right: 5px;
     border-radius: 50%;
-    /* position: absolute; */
-    /* transition: 0.4s ease-in-out; */
+    
 }
 .icon-box:hover {
     width: 30px;
@@ -221,18 +198,14 @@
 }
 
 .forum-container h2{
-    /* margin: 1vh;
-    padding: .25vh; */
     text-align: center;
     width: 100%;
     font-size: 1rem;
-    /* color: #78788c; */
     border-bottom: 2px solid #000000;
 }
 .input-content{
     display: flex;
     flex-direction: column;
-    /* margin-top: 2vh; */
 }
 .forum-container input{
     width: 100%;
@@ -246,7 +219,6 @@
 }
 .forum-bttns{
     display: flex;
-    /* justify-content: center; */
     gap: 1rem;
     padding-top: 1vh;
 }

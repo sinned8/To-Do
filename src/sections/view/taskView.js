@@ -34,15 +34,9 @@ export default class TaskItemView
     }
     get id(){
         return this.element.getAttribute('id')
-
-        
     }
     set id(value){
         this.element.setAttribute('id',value)
-
-        // const checkBoxId = `checkbox-${value}`;
-        // this.checkbox.setAttribute("id", checkBoxId);
-        // this.checkboxLabel.setAttribute("for", checkBoxId)
     }
     set name(value){
         this.taskName.textContent = value

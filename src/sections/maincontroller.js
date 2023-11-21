@@ -94,22 +94,13 @@ checkCheckbox(taskItemView){
 onAddProjectForumSubmit(e){
     e.preventDefault()
     this.createNewProject()
-    // failling after this.createNewProject() is called
-
     this.view.resetAndCloseForumByID('add-proj-forum','add-proj-container')
-    
-
 }
 createNewProject(){
     const name = this.view.getAddProjectForumElementValueByName('proj-name')
     const newProject = this.model.createNewProject(name)
-    
-
     this.appendAndHookUpNewProjectFromModel(newProject)
-    
-
     this.model.updateProjectListLocalStorage();
-    
 }
 appendAndHookUpNewProjectFromModel(newProject){
     const newProjectView = this.view.appendProject(newProject);

@@ -12,7 +12,7 @@ export default class ProjectView{
     
     get projectName(){
         return this.element.querySelector('.project') 
-        // querSelector only for CSS classes
+        
     }
     get id(){
         return this.element.getAttribute('id')
@@ -21,9 +21,6 @@ export default class ProjectView{
     get deleteBttn(){
         return this.element.querySelector('.delete-project-bttn')
     }
-    // get editBttn(){
-    //     return this.element.querySelector('proj-edit-icon')
-    // }
     set id(value){
         this.element.setAttribute("id", value)
         
